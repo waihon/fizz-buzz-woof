@@ -15,7 +15,7 @@ module Utilities
 
       number_output << word if number_s.include?(num_s)
       number_output << word if number % num == 0
-      number_output << word if number_s.include?(num_s * 2) && number % num == 0
+      number_output << word if (number_s.split("").count(num_s) >= 2) && (number % num == 0)
     end
 
     number_output << number_s if number_output.empty?
