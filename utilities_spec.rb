@@ -159,7 +159,7 @@ describe Utilities do
       end
     end
 
-    context "selected numbers between 10001 and 100000" do
+    context "selected numbers between 1001 and 10000" do
       it "returns 'Woof' for 1001" do
         expect(Utilities.fizz_buzz_woof(1001)).to eq('Woof')
       end
@@ -222,6 +222,36 @@ describe Utilities do
 
       it "return 'Woof Woof Woof' for 7777" do
         expect(Utilities.fizz_buzz_woof(7777)).to eq('Woof Woof Woof')
+      end
+
+      it "return 'Buzz' for 10000" do
+        expect(Utilities.fizz_buzz_woof(10000)).to eq('Buzz')
+      end
+    end
+
+    context "selected numbers more than 10000" do
+      it "return 'Fizz Fizz Fizz' for 30303" do
+        expect(Utilities.fizz_buzz_woof(30303)).to eq('Fizz Fizz Fizz Woof')
+      end
+
+      it "return 'Buzz Buzz Buzz' for 50505" do
+        expect(Utilities.fizz_buzz_woof(50505)).to eq('Fizz Buzz Buzz Buzz Woof')
+      end
+
+      it "return 'Woof Woof Woof' for 70707" do
+        expect(Utilities.fizz_buzz_woof(70707)).to eq('Fizz Woof Woof Woof')
+      end
+
+      it "return 'Fizz Fizz Fizz' for 3030303" do
+        expect(Utilities.fizz_buzz_woof(3030303)).to eq('Fizz Fizz Fizz')
+      end
+
+      it "return 'Buzz Buzz Buzz' for 5050505" do
+        expect(Utilities.fizz_buzz_woof(5050505)).to eq('Buzz Buzz Buzz')
+      end
+
+      it "return 'Woof Woof Woof' for 7070707" do
+        expect(Utilities.fizz_buzz_woof(7070707)).to eq('Woof Woof Woof')
       end
     end
   end
